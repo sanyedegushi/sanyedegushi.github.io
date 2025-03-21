@@ -1,5 +1,22 @@
+/* body 和 html 都需要设置为背景图 */
+html,
 body {
-    background: url('/images/xue-zhi-xia.jpg') no-repeat center center fixed;
-    background-size: cover;
+    height: 100%;
+    margin: 0;
+}
 
+/* 确保背景图始终覆盖整个页面 */
+body {
+    background: url('/images/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    /* 确保背景图始终填满整个视口 */
+    overflow-x: hidden;
+    /* 防止水平滚动 */
+}
+
+/* 页面内容区 */
+.content {
+    position: relative;
+    z-index: 10;
+    /* 确保文章内容不会覆盖背景图 */
 }
